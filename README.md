@@ -111,6 +111,9 @@ ALTER TABLE turnos_reservas
 
 ------------------------------------
 
+
+
+
 DELIMITER $$
  
 DROP PROCEDURE IF EXISTS sp_estadisticas_atenciones$$
@@ -169,6 +172,5 @@ DELIMITER ;
 
 ALTER TABLE turnos_reservas
     ADD COLUMN IF NOT EXISTS observaciones TEXT DEFAULT NULL AFTER atentido;
-
 
 
