@@ -1,40 +1,10 @@
 
-SE AGREGO UN SP MAS QUE EL DEL PROFESOR PARA CUMPLIR CON LAS PODER CORRER LA FUNCIONALIDAD NUEVA SOLICITADA, Permitir al profesional agregar comentarios u observaciones respecto de la atención.
-
-CUMPLE CON Arquitectura general — la separación en 3 capas (rutas → controladores → servicios → db) y  tiene su responsabilidad.
+SE AGREGO UN SP MAS QUE EL DEL PROFESOR PARA CUMPLIR CON LAS PODER CORRER LA FUNCIONALIDAD NUEVA SOLICITADA,.
 
 
 ----------------------------------------------------------------------
 
-SP DEL PROFESOR
-DELIMITER $$
 
-CREATE PROCEDURE sp_reporte_turnos_por_especialidad_consola()
-BEGIN
-    SELECT
-        e.id_especialidad,
-        e.nombre AS especialidad,
-        COUNT(tr.id_turno) AS cantidad_turnos, 
-        COALESCE(SUM(tr.valor_total), 0) AS facturacion_total
-    FROM especialidades e
-    LEFT JOIN medicos m
-        ON e.id_especialidad = m.id_especialidad
-    LEFT JOIN turnos_reservas tr
-        ON m.id_medico = tr.id_medico
-        AND MONTH(tr.fecha_hora) = MONTH(CURRENT_DATE - INTERVAL 1 MONTH)
-        AND tr.activo = 1
-    WHERE e.activo = 1
-    GROUP BY
-        e.id_especialidad, 
-        e.nombre
-    ORDER BY cantidad_turnos DESC;
-END$$
-
-DELIMITER ;
-
-
------------------------------------------------------
-SP AGREGADO PARA LA NUEVA FUNCIONALIDAD 
 
  
 DELIMITER $$
