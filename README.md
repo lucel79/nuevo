@@ -47,6 +47,9 @@ Npm run dev
 
 -------------------------------------
 
+
+
+
 DELIMITER $$
  
 DROP PROCEDURE IF EXISTS sp_estadisticas_atenciones$$
@@ -99,6 +102,13 @@ BEGIN
     GROUP BY m.id_medico, u.nombres, u.apellido, e.nombre
     ORDER BY recaudacion DESC;
 END$$
+ 
+DELIMITER ;
+ 
+
+ALTER TABLE turnos_reservas
+    ADD COLUMN IF NOT EXISTS observaciones TEXT DEFAULT NULL AFTER atentido;
+
  
 DELIMITER ;
  
