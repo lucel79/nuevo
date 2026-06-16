@@ -1,25 +1,33 @@
-API REST - CLINICA MEDICA
+                                             API REST - CLINICA MEDICA
 
 -----------------------------------------------------------------------------------
 
-ALUMNOS
+                                               ALUMNOS
 
 -----------------------------------------------------------------
 
-GRUPO 
+                                               GRUPO 
 
 
 ------------------------------------------------------------------
 
 CARACTERISTICAS
 •	✅ Autenticación JWT 
+
 •	✅ Autorización por roles (Admin, Empleado, Cliente)
+
 •	✅ BREAD completo
+
 •	✅ Validaciones con express-validator
+
 •	✅ Documentación Swagger
+
 •	✅ Soft delete 
+
 •	✅ Procedimientos almacenados 
+
 •	✅ Generación de reportes PDF/CSV
+
 •	✅  CORS, Multer
 
 ---------------------------------------------------------------
