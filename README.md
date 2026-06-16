@@ -11,7 +11,8 @@
 
 ------------------------------------------------------------------
 
-CARACTERISTICAS
+                                       CARACTERISTICAS
+
 •	✅ Autenticación JWT 
 
 •	✅ Autorización por roles (Admin, Empleado, Cliente)
