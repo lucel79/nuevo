@@ -33,17 +33,25 @@
 
 ---------------------------------------------------------------
 Npm run dev
+
 Estructura de roles
+
 Medico  Rrol = 1
+
 Paciente Rol = 2
+
 Administrador Rol 3
 
 
 Documentación
+
 Swagger UI disponible en: http://localhost:3006/api/v1/docs
 
 -------------------------------------------------------------------
+
 Se debe agregar a la db
+
+
 
 
 DELIMITER $$
