@@ -5,6 +5,9 @@
 
 ## Alumnos
 
+Fernando Ruben Bareiro Ruiz
+Lumila Tovares
+
 
 ------------------------------------------------------------------
 ## Grupo
