@@ -1,58 +1,52 @@
-                                             API REST - CLINICA MEDICA
 
------------------------------------------------------------------------------------
+                                              # API REST - CLINICA MEDICA
 
-                                               ALUMNOS
+----------------------------------------------------------------
 
------------------------------------------------------------------
-
-                                               GRUPO 
+## Alumnos
 
 
 ------------------------------------------------------------------
+## Grupo
 
-                                       CARACTERISTICAS
 
-•	✅ Autenticación JWT 
 
-•	✅ Autorización por roles (Admin, Empleado, Cliente)
+------------------------------------------------------------------
+##Características
 
-•	✅ BREAD completo
+* ✅ Autenticación JWT 
+* ✅ Autorización por roles (Admin, Empleado, Cliente)
+* ✅ BREAD completo
+* ✅ Validaciones con express-validator
+* ✅ Documentación Swagger
+* ✅ Soft delete 
+* ✅ Procedimientos almacenados 
+* ✅ Generación de reportes PDF/CSV
+* ✅ CORS, Multer
 
-•	✅ Validaciones con express-validator
+-------------------------------------------------
 
-•	✅ Documentación Swagger
+##Estructura de roles
 
-•	✅ Soft delete 
+* **Medico** Rol = 1
+* **Paciente** Rol = 2
+* **Administrador** Rol 3
 
-•	✅ Procedimientos almacenados 
-
-•	✅ Generación de reportes PDF/CSV
-
-•	✅  CORS, Multer
-
----------------------------------------------------------------
-Npm run dev
-
-Estructura de roles
-
-Medico  Rrol = 1
-
-Paciente Rol = 2
-
-Administrador Rol 3
-
+---------------------------------
 
 Documentación
 
 Swagger UI disponible en: http://localhost:3006/api/v1/docs
 
--------------------------------------------------------------------
+-------------------------------------
 
+Ejecución del proyecto
+
+
+Npm run dev
+
+-------------------------------------
 Se debe agregar a la db
-
-
-
 
 DELIMITER $$
  
@@ -112,6 +106,5 @@ DELIMITER ;
 
 ALTER TABLE turnos_reservas
     ADD COLUMN IF NOT EXISTS observaciones TEXT DEFAULT NULL AFTER atentido;
-
 
 
